@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tp TypeScript</title>
+
+    <style>
+      :root {
+        --color-bg: #f3f4f6;
+        --color-card: #ffffff;
+        --color-primary: #4caf50;
+        --color-primary-hover: #43a047;
+        --color-text: #333333;
+        --radius: 6px;
+        --transition-speed: 0.2s;
+      }
+
+      /* Reset básico */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        line-height: 1.5;
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      /* Contenedor central */
+      #app {
+        background-color: var(--color-card);
+        padding: 2rem;
+        border-radius: var(--radius);
+        max-width: 600px;
+        width: 100%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      /* Botón */
+      button#btn-cargar {
+        display: inline-block;
+        background-color: var(--color-primary);
+        color: white;
+        border: none;
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+        border-radius: var(--radius);
+        cursor: pointer;
+        transition: background-color var(--transition-speed);
+      }
+      button#btn-cargar:hover {
+        background-color: var(--color-primary-hover);
+      }
+
+      /* Lista de usuarios */
+      #lista-usuarios {
+        list-style: none;
+        margin-top: 1.5rem;
+      }
+      #lista-usuarios li {
+        background-color: var(--color-card);
+        border: 1px solid #e0e0e0;
+        padding: 0.75rem 1rem;
+        margin-bottom: 0.75rem;
+        border-radius: var(--radius);
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <button id="btn-cargar">Cargar usuarios</button>
+      <ul id="lista-usuarios"></ul>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
